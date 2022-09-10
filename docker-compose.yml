@@ -6,3 +6,5 @@ services:
     container_name: test-webserver
     ports:
       - 80:80
+    volumes:
+      - ./www/html/:/var/www/html/
