@@ -8,9 +8,17 @@ services:
       - 80:80
     volumes:
       - ./www/html/:/var/www/html/
-# ############
+    networks:
+      - test
+##############
   app:
     image: php:8.0-fpm
     container_name: test-app
     volumes:
       - ./www/html/:/var/www/html/
+    networks:
+      - test
+
+networks:
+  test:
+    name: test-network
