@@ -8,3 +8,9 @@ services:
       - 80:80
     volumes:
       - ./www/html/:/var/www/html/
+# ############
+  app:
+    image: php:8.0-fpm
+    container_name: test-app
+    volumes:
+      - ./www/html/:/var/www/html/
